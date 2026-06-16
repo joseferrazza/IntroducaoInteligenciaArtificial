@@ -364,14 +364,14 @@ Caminho encontrado (Dev by Zé): Arad -> Sibiu -> Fagaras -> Bucharest
 
 Este documento orienta a execução e a análise didática do script `busca_a_estrela.py`. O programa foi projetado para demonstrar o comportamento do algoritmo de Busca A* através de uma abordagem de otimização que calcula o caminho de custo mínimo real no cenário do Mapa da Romênia.
 
-## 6.1 - Pré-requisitos
+### 6.1 - Pré-requisitos
 
 Antes de iniciar, certifique-se de que cumpre os seguintes requisitos no seu ambiente de desenvolvimento:
 * **Interpretador**: Python instalado na versão **3.6 ou superior**.
 * **Dependências**: Nenhuma. O script utiliza bibliotecas nativas do Python, destacando-se o módulo `heapq` para gerenciar a fila de prioridades de forma eficiente.
 * **Arquivos**: O arquivo `busca_a_estrela.py` deve estar presente na pasta atual do seu terminal.
 
-## 6.2 - Como Executar
+### 6.2 - Como Executar
 
 1. Abra o terminal de comandos do seu sistema operacional (Prompt de Comando, PowerShell, Terminal do Linux/macOS ou o terminal integrado do VS Code).
 2. Navegue até o diretório onde o arquivo `busca_a_estrela.py` está guardado:
@@ -382,7 +382,7 @@ Antes de iniciar, certifique-se de que cumpre os seguintes requisitos no seu amb
    ```bash
    python busca_a_estrela.py
    ```
-## 6.3 - Interação com o Programa
+### 6.3 - Interação com o Programa
 Assim que o script for iniciado, ele criará uma interface textual interativa no console. Siga os passos abaixo:
 
 1. Definição da Cidade de Origem
