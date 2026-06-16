@@ -1,7 +1,10 @@
 # Introdução à Inteligencia Artificial
 Repositório dos trabalhos da matéria de introdução à Inteligência Artificial - Professor Arnaldo - Fatec São Carlos
 
-# Algoritmos de Busca Informada no Mapa da Romênia (A* e Busca Gulosa)
+![Static Badge](https://img.shields.io/badge/Status-Concluído-blue)
+![Static Badge](https://img.shields.io/badge/Back_end-Python-orange)
+
+# Algoritmos de Busca no Mapa da Romênia (A* e Busca Gulosa)
 
 Este repositório contém as implementações e análises comparativas de algoritmos de busca informada aplicados ao clássico problema do **Mapa da Romênia**, baseado no Capítulo 3 do livro clássico *“Inteligência Artificial: Uma Abordagem Moderna”* de Stuart Russell e Peter Norvig.
 
@@ -47,25 +50,63 @@ O sistema é composto por dois scripts executáveis em ambiente de terminal de l
 ## 📊 Diagramas do Sistema
 
 ### 1. Diagrama de Casos de Uso (UML)
-O diagrama abaixo mapeia os limites do sistema e o papel do Professor/Aluno (Usuário) ao interagir com as rotinas de busca.
+O diagrama de caso de uso mapeia como o usuário interage com o sistema para selecionar uma cidade e visualizar as rotas informadas, destacando a execução comparativa das duas funções na busca gulosa
 
 ```mermaid
 graph TD
+    %% Definição de Atores
     User((Usuário / Aluno))
     
-    subgraph Sistema de Busca Informada
-        UC1(Informar Cidade de Partida)
+    %% Fronteira do Sistema
+    subgraph Sistema de Busca Gulosa
+        UC1(Informar Cidade de Origem)
         UC2(Validar Cidade no Mapa)
-        UC3(Executar Busca A*)
-        UC4(Executar Busca Gulosa Comparativa)
-        UC5(Visualizar Rota e Custo Total)
-        UC6(Visualizar Logs de Expansão)
+        UC3(Executar Busca Gulosa Comparativa)
+        UC4(Executar Algoritmo IA)
+        UC5(Executar Algoritmo do Zé)
+        UC6(Visualizar Rota e Logs de Expansão)
     end
     
+    %% Relacionamentos e Associações
     User --> UC1
-    UC1 --> UC2
     User --> UC3
+    
+    UC1 -.->|<<include>>| UC2
+    
+    UC3 -.->|<<include>>| UC4
+    UC3 -.->|<<include>>| UC5
+    
+    UC4 -.->|<<include>>| UC6
+    UC5 -.->|<<include>>| UC6
 ```
+O diagrama de caso de uso da busca A* mapeia as interações do operador com o sistema para definir o ponto de partida e visualizar a rota ótima calculada através da função de avaliação combinada $f(n) = g(n) + h(n)
+
+```mermaid
+graph TD
+    %% Definição de Atores
+    User((Usuário / Aluno))
+    
+    %% Fronteira do Sistema
+    subgraph Sistema de Busca A*
+        UC_In(Informar Cidade de Origem)
+        UC_Val(Validar Cidade no Mapa)
+        UC_Exec(Executar Busca A* Ótima)
+        UC_Calc("Calcular Custo g(n) + h(n)")
+        UC_Filtro(Filtrar Nós e Ciclos Redundantes)
+        UC_Exibe(Visualizar Rota Ótima e Custo Total)
+    end
+    
+    %% Relacionamentos e Associações
+    User --> UC_In
+    User --> UC_Exec
+    
+    UC_In -.->|<<include>>| UC_Val
+    
+    UC_Exec -.->|<<include>>| UC_Calc
+    UC_Exec -.->|<<include>>| UC_Filtro
+    UC_Exec -.->|<<include>>| UC_Exibe
+```  
+
 ### 2. Diagrama de Sequencia
 O diagrama de sequência da busca gulosa ilustra o fluxo de mensagens entre o terminal e as funções de IA e do "Zé", mostrando o rastreamento e a ordenação dos nós baseados estritamente no menor valor da heurística local até atingir o objetivo.
 ```mermaid
