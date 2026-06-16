@@ -4,7 +4,7 @@ Repositório dos trabalhos da matéria de introdução à Inteligência Artifici
 ![Static Badge](https://img.shields.io/badge/Status-Concluído-blue)
 ![Static Badge](https://img.shields.io/badge/Back_end-Python-orange)
 
-# Algoritmos de Busca no Mapa da Romênia (A* e Busca Gulosa)
+## Algoritmos de Busca no Mapa da Romênia
 
 Este repositório contém as implementações e análises comparativas de algoritmos de busca informada aplicados ao clássico problema do **Mapa da Romênia**, baseado no Capítulo 3 do livro clássico *“Inteligência Artificial: Uma Abordagem Moderna”* de Stuart Russell e Peter Norvig.
 
@@ -12,7 +12,7 @@ O objetivo do projeto é determinar caminhos eficientes partindo de qualquer cid
 
 ---
 
-## 🛠️ 1 - Descrição do Projeto
+## 1 - Descrição
 
 O sistema é composto por dois scripts executáveis em ambiente de terminal de linha de comando:
 1.1 **`busca_a_estrela.py`**: Implementa o algoritmo de busca ótima **A***. Ele utiliza uma fila de prioridade para balancear o custo real já percorrido do caminho ($g(n)$) com a estimativa heurística da distância restante em linha reta ($h(n)$), resultando na função de avaliação estável $f(n) = g(n) + h(n)$.
@@ -23,7 +23,7 @@ O sistema é composto por dois scripts executáveis em ambiente de terminal de l
 
 ---
 
-## 📋 2 - Requisitos Funcionais (RF)
+## 2 - Requisitos Funcionais (RF)
 
 * **RF01 - Entrada Interativa de Origem**: O sistema deve permitir que o operador insira via console (`input`) o nome da cidade de partida da busca.
 * **RF02 - Validação do Ponto de Partida**: O sistema deve checar obrigatoriamente se a cidade digitada consta na base de dados (heurística/grafo). Se for inválida, exibirá um alerta e repetirá a entrada em loop até o recebimento de um dado válido.
@@ -34,7 +34,7 @@ O sistema é composto por dois scripts executáveis em ambiente de terminal de l
 
 ---
 
-## 🛡️ 3 - Requisitos Não Funcionais (RNF)
+## 3 - Requisitos Não Funcionais (RNF)
 
 * **RNF01 - Desempenho**: O cálculo do A* e da Busca Gulosa para a malha de dados proposta deve ser concluído e impresso em tempo de execução inferior a 100 milissegundos após a validação da entrada.
 * **RNF02 - Segurança**: O sistema deve rodar isolado em escopo de usuário local, sem necessidade de privilégios de administrador (`root`/`sudo`) e sem comunicação externa de rede.
@@ -47,7 +47,7 @@ O sistema é composto por dois scripts executáveis em ambiente de terminal de l
 
 ---
 
-## 📊 4 - Diagramas do Sistema
+## 4 - Diagramas do Sistema
 
 ### 4.1 - Diagrama de Casos de Uso (UML)
 O diagrama de caso de uso mapeia como o usuário interage com o sistema para selecionar uma cidade e visualizar as rotas informadas, destacando a execução comparativa das duas funções na busca gulosa
@@ -287,7 +287,7 @@ stateDiagram-v2
 ```
 ---
 
-## 🚀 5 - Instruções de Uso - Busca Gulosa
+## 5 - Instruções de Uso - Busca Gulosa
 
 Este tópico orienta a execução e a análise didática do script `busca_gulosa.py`. O programa foi projetado para demonstrar o comportamento do algoritmo de Busca Gulosa através de duas abordagens distintas de código enfrentadas no mesmo cenário (Mapa da Romênia).
 
@@ -364,7 +364,7 @@ Caminho encontrado (Dev by Zé): Arad -> Sibiu -> Fagaras -> Bucharest
 
 ---
 
-## 🚀 6 - Instruções de Uso - Busca A*
+## 6 - Instruções de Uso - Busca A*
 
 Este documento orienta a execução e a análise didática do script `busca_a_estrela.py`. O programa foi projetado para demonstrar o comportamento do algoritmo de Busca A* através de uma abordagem de otimização que calcula o caminho de custo mínimo real no cenário do Mapa da Romênia.
 
