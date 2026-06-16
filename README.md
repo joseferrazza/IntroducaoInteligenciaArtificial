@@ -284,7 +284,7 @@ stateDiagram-v2
     Falha --> ExibindoResultados
     
     ExibindoResultados --> [*] : Encerra o Programa com a Rota Ótima
-
+```
 ---
 
 ## 🚀 5 - Instruções de Uso - Busca Gulosa
