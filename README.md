@@ -284,7 +284,9 @@ stateDiagram-v2
     Falha --> ExibindoResultados
     
     ExibindoResultados --> [*] : Encerra o Programa com a Rota Ótima
-```
+
+---
+
 ## 🚀 5 - Instruções de Uso - Busca Gulosa
 
 Este tópico orienta a execução e a análise didática do script `busca_gulosa.py`. O programa foi projetado para demonstrar o comportamento do algoritmo de Busca Gulosa através de duas abordagens distintas de código enfrentadas no mesmo cenário (Mapa da Romênia).
@@ -359,6 +361,8 @@ Expandindo: Bucharest (h = 0)
 
 Caminho encontrado (Dev by Zé): Arad -> Sibiu -> Fagaras -> Bucharest
 ```
+
+---
 
 ## 🚀 6 - Instruções de Uso - Busca A*
 
