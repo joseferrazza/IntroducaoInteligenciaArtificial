@@ -15,6 +15,7 @@ O objetivo do projeto é determinar caminhos eficientes partindo de qualquer cid
 ## 1 - Descrição
 
 O sistema é composto por dois scripts executáveis em ambiente de terminal de linha de comando:
+
 1.1 **`busca_a_estrela.py`**: Implementa o algoritmo de busca ótima **A***. Ele utiliza uma fila de prioridade para balancear o custo real já percorrido do caminho ($g(n)$) com a estimativa heurística da distância restante em linha reta ($h(n)$), resultando na função de avaliação estável $f(n) = g(n) + h(n)$.
    
 1.2 **`busca_gulosa.py`**: Implementa e confronta duas perspectivas lógicas distintas do algoritmo **Busca Gulosa (Greedy Best-First Search)**:
